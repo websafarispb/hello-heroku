@@ -5,18 +5,15 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import lombok.AllArgsConstructor;
 import ru.stepev.helloheroku.model.Cat;
 import ru.stepev.helloheroku.repository.CatRepository;
 
 @Service
-//@AllArgsConstructor
+@AllArgsConstructor
 public class CatService {
 
 	private CatRepository catRepository;
-
-	public CatService(CatRepository catRepository) {
-		this.catRepository = catRepository;
-	}
 
 	public List<Cat> getAll() {
 		return catRepository.findAll();

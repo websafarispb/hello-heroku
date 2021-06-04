@@ -34,7 +34,7 @@ public class CatController {
 	public String getCat(@PathVariable int id, Model model) {
 		Cat cat = catService.getById(id).orElseThrow();
 		model.addAttribute("cat", cat);
-		return "show-classroom";
+		return "show-cat";
 	}
 	
 	@GetMapping("/add")
